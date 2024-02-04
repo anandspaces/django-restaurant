@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patliputra Palate</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    
+    <nav>
+        <p><a href="restaurantweb">Home</a></p>
+        <div class="dropdown">
+            <span>Menu</span>
+            <!-- <div class="dropdown-content">
+                <a href="#menu">Starter</a>
+                <a href="#menu">Lunch</a>
+                <a href="#menu">Dinner</a>
+                <a href="#menu">Extras</a>
+                <a href="#menu">Drink</a>
+            </div> -->
+        </div>
+        <p>Shop</p>
+    </nav>
+    <main>
+        <div>
+            <p class="head1">Patliputra Palate</p>
+            <p class="head2">Patna</p>
+            <img src="{% static 'exotic.jpeg' %}" style="float: right;" alt="image_restaurant">
+            <p class="mainpara">Patliputra Palate invites you to savor Bihar's rich heritage with a fusion of ancient and modern flavors. Our restaurant offers a cultural journey through food, perfect for all occasions.</p>
+            <a href="#section1"><button id="RaT">Reserve a Table</button></a>
+        </div>
+        <!-- <div>
+            <p class="OFD">Out For Delivery!</p>
+        </div> -->
+        <div id="menu">
+                <label for="starter">Starter</label>
+                <input type="radio" id="starter">
+                <label for="lunch">Lunch</label>
+                <input type="radio" id="lunch">
+                <label for="dinner">Dinner</label>
+                <input type="radio" id="dinner">
+                <label for="extras">Extras</label>
+                <input type="radio" id="extras">
+                <label for="drinks">Drinks</label>
+                <input type="radio" id="drinks">
+        </div>
+        <div>
+            <div class="food_content">
+                <p>Sushi is a Japanese dish that has taken the world by storm. In recent years, sushi has gained popularity in India, but it is still considered a niche cuisine. However, with Indian twists, sushi has the potential to reach new heights of popularity. From vegetarian sushi rolls to paneer sushi, Indian chefs are experimenting with sushi to suit the Indian palate.</p>
+                <img src="{% static 'shushi.jpeg' %}" alt="sushi">
+            </div>
+            <div class="food_content">
+                <p>Momo, a Tibetan dish, has been a popular street food in India for decades. However, the Indian food scene is now shifting its focus to Bao and Thapnese buns, which are taking over the food scene. These steamed buns filled with meat or vegetables are soft, fluffy, and flavorful. They are perfect as a snack or a meal and can be found in high-end restaurants as well as street food stalls.</p>
+                <img src="{% static 'momo.jpeg' %}" alt="momo">
+            </div>
+            <div class="food_content">
+                <p>Korean cuisine has been gaining popularity in India over the past few years. Korean noodles, also known as Ramyeon, have become a new favorite among food enthusiasts. These noodles are spicy, flavorful, and perfect for a quick meal. They are now available in many Korean restaurants across India.</p>
+                <img src="{% static 'korean_cuisine.jpeg' %}"  alt="korean_cuisine">
+            </div>
+            <div class="food_content">
+                <p>Pizza has been a popular food in India for many years, and there are many pizza chains across the country. However, people are now turning to authentic Italian pizza made in a firewood oven. Napoleon pizza is a thin-crust pizza topped with fresh ingredients and cooked in a wood-fired oven. It is a delicious and healthier alternative to big food chain pizzas.</p>
+                <img src="{% static 'pizza.jpeg' %}"  alt="pizza">
+            </div>
+        </div>
+        <div id="section1">
+            <h2>Reserve a Table</h2>
+            <form action="">
+                <label for="dateOfArrival">Date(MM-DD-YYYY)* </label>
+                <input type="date" id="dateOfArrival" required>
+                <br>
+                <label for="timeOfArrival">Time* </label>
+                <input type="time" id="timeOfArrival" required>
+                <label for="noOfDiners">No. of Diners* </label>
+                <input type="number" id="noOfDiners" required>
+                <br>
+                <p><b>Contact Information</b></p>
+                <br>
+                <label for="firstName">First Name* </label>
+                <input type="text" id="firstName" required>
+                <label for="lastName">Last Name* </label>
+                <input type="text" id="lastName" required>
+                <br>
+                <label for="emailID">Email* </label>
+                <input type="email" id="emailID" required>
+                <br>
+                <label for="phoneNo">Phone No.* </label>
+                <input type="number" id="phoneNo" required>
+                <p>*is required</p>
+                <button type="submit" id="submit_button">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="{% static 'RestaurantWeb.js' %}"></script>
+</body>
+</html>

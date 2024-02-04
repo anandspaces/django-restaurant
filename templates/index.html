@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Patliputra Palate</title>
+</head>
+<body>
+    <img class="homeimg" src="{% static 'resimage.jpg' %}" alt="home">
+    <div class="homepage">
+
+        <button id="homepageButton">Dive In</button>
+    </div>
+    <script>
+        const homeButton = document.getElementById("homepageButton");
+        homeButton.addEventListener('click',()=>{
+            window.location.href = "restaurantweb";
+        });
+    </script>
+</body>
+</html>
