@@ -66,8 +66,10 @@
         </div>
         <div id="section1">
             <h2>Reserve a Table</h2>
-            <form action="">
-                <label for="dateOfArrival">Date(MM-DD-YYYY)* </label>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <!-- <label for="dateOfArrival">Date(MM-DD-YYYY)* </label>
                 <input type="date" id="dateOfArrival" required>
                 <br>
                 <label for="timeOfArrival">Time* </label>
@@ -87,7 +89,7 @@
                 <br>
                 <label for="phoneNo">Phone No.* </label>
                 <input type="number" id="phoneNo" required>
-                <p>*is required</p>
+                <p>*is required</p> -->
                 <button type="submit" id="submit_button">Submit</button>
             </form>
         </div>
