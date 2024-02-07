@@ -10,7 +10,7 @@
 <body>
     
     <nav>
-        <p><a href="restaurantweb">Home</a></p>
+        <p><a href="{% url 'web' %}">Home</a></p>
         <div class="dropdown">
             <span>Menu</span>
             <!-- <div class="dropdown-content">
@@ -69,7 +69,13 @@
             <form action="" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <!-- <label for="dateOfArrival">Date(MM-DD-YYYY)* </label>
+                <div>
+                    <button type="submit" onclick="myFun()" id="submit_button">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- <label for="dateOfArrival">Date(MM-DD-YYYY)* </label>
                 <input type="date" id="dateOfArrival" required>
                 <br>
                 <label for="timeOfArrival">Time* </label>
@@ -90,10 +96,10 @@
                 <label for="phoneNo">Phone No.* </label>
                 <input type="number" id="phoneNo" required>
                 <p>*is required</p> -->
-                <button type="submit" id="submit_button">Submit</button>
-            </form>
-        </div>
-    </main>
-    <script src="{% static 'RestaurantWeb.js' %}"></script>
+    <script>
+        function myFun(){
+            alert('Form Submitted!');
+        }
+    </script>
 </body>
 </html>

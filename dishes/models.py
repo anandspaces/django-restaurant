@@ -10,4 +10,4 @@ class Customer(models.Model):
     phone_no = models.PositiveIntegerField(null=True)
 
     def __str__(self):
-        return self.datetime + ' ' + self.no_of_diners + ' ' + self.first_name + ' ' + self.last_name + ' ' + self.email + ' ' + self.phone_no
+        return f"{self.datetime}  {self.no_of_diners}  {self.first_name}  {self.last_name}  {self.email}  {self.phone_no}"

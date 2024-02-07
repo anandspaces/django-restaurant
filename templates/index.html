@@ -11,13 +11,8 @@
     <img class="homeimg" src="{% static 'resimage.jpg' %}" alt="home">
     <div class="homepage">
 
-        <button id="homepageButton">Dive In</button>
+        <button id="homepageButton"><a href="{% url 'web' %}">Dive In</a></button>
     </div>
-    <script>
-        const homeButton = document.getElementById("homepageButton");
-        homeButton.addEventListener('click',()=>{
-            window.location.href = "restaurantweb";
-        });
-    </script>
+    
 </body>
 </html>

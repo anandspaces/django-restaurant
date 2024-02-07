@@ -3,7 +3,7 @@ from .views import home,web,inform,confirm
 
 urlpatterns = [
     path('',home,name='home'),
-    path('restaurantweb/',web),
-    path('restaurantweb/information/',inform),
-    path('restaurantweb/information/confirmation/',confirm),
+    path('restaurantweb/',web,name='web'),
+    path('inform/',inform,name='inform'),
+    path('confirm/',confirm,name='confirm'),
 ]

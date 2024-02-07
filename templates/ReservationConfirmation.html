@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <p><a href="restaurantweb">Home</a></p>
+        <p><a href="{% url 'web' %}">Home</a></p>
         <div class="dropdown">
             <span>Menu</span>
             <div class="dropdown-content">
@@ -23,13 +23,26 @@
     <div id="section3">
         <h2>Reservation Confirmation</h2>
         <p>Reservation ID: </p>
-        <p id="RID">RID</p>
+        <p id="RID"></p>
         <p>We will notify you in a day advance</p>
         <p>Hope to see you soon!</p>
-        <p><b>For more Information: </b><br>patliputra.palate@gmail.com<br>+91 XXXXXXXXXX</p>
-        <button id="goBackHomeButton">Go Back Home</button>
+        <p><b>For more Information: </b><br>patliputra.palate@gmail.com<br></p>
+        <button id="goBackHomeButton"><a href="{% url 'web' %}">Go Back Home</a></button>
     </div>
-    <script src="{% static 'ReservationConfirmation.js' %}"></script>
-    
+    <script>
+        function generateRandomIntRID() {
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            const randomNum = getRandomInt(100000000, 999999999);
+
+            document.getElementById("RID").textContent = randomNum;
+        }
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            generateRandomIntRID();
+        })
+    </script>
 </body>
 </html>
