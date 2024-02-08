@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'icon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Patliputra Palate</title>
+</head>
+<body>
+    {% block header_content %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+    {% block footer_content %}
+    {% endblock %}
+</body>
+</html>

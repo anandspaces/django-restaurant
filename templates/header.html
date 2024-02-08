@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header_content %}
+<nav>
+    <p><a href="{% url 'web' %}">Home</a></p>
+    <div class="dropdown">
+        <span>Menu</span>
+        <!-- <div class="dropdown-content">
+            <a href="#menu">Starter</a>
+            <a href="#menu">Lunch</a>
+            <a href="#menu">Dinner</a>
+            <a href="#menu">Extras</a>
+            <a href="#menu">Drink</a>
+        </div> -->
+    </div>
+    <p>Shop</p>
+</nav>
+{% endblock %}
