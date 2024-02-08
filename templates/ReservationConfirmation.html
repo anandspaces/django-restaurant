@@ -23,13 +23,13 @@
     <div id="section3">
         <h2>Reservation Confirmation</h2>
         <p>Reservation ID: </p>
-        <p id="RID"></p>
+        <p id="RID">{{RID}}</p>
         <p>We will notify you in a day advance</p>
         <p>Hope to see you soon!</p>
         <p><b>For more Information: </b><br>patliputra.palate@gmail.com<br></p>
         <button id="goBackHomeButton"><a href="{% url 'web' %}">Go Back Home</a></button>
     </div>
-    <script>
+    <!-- <script>
         function generateRandomIntRID() {
             function getRandomInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -43,6 +43,6 @@
         document.addEventListener('DOMContentLoaded',()=>{
             generateRandomIntRID();
         })
-    </script>
+    </script> -->
 </body>
 </html>
