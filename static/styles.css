@@ -300,6 +300,6 @@ img{
     bottom: 0;
     width: 100%;
 } */
-.food-content img {
-    float: right;
+.btn a{
+    color: black;
 }

@@ -2,14 +2,19 @@
 {% load static %}
 {% block content %}
 {% include 'header.html' %}
-<div class="container" id="section3">
-    <h2>Reservation Confirmation</h2>
-    <p>Reservation ID: </p>
-    <p id="RID">{{RID}}</p>
-    <p>We will notify you in a day advance</p>
-    <p>Hope to see you soon!</p>
-    <p><b>For more Information: </b><br>patliputra.palate@gmail.com<br></p>
-    <button id="goBackHomeButton"><a href="{% url 'web' %}">Go Back Home</a></button>
+<div class="container mt-5" id="section3">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Reservation Confirmation</h2>
+            <hr>
+            <p><strong>Reservation ID:</strong> {{ RID }}</p>
+            <p>We will notify you one day in advance.</p>
+            <p>Hope to see you soon!</p>
+            <p><strong>For more information:</strong></p>
+            <p>patliputra.palate@gmail.com</p>
+            <button class="btn btn-warning mt-3" id="goBackHomeButton"><a href="{% url 'web' %}" class="text-white">Go Back Home</a></button>
+        </div>
+    </div>
 </div>
 {% include 'footer.html' %}
 {% endblock %}

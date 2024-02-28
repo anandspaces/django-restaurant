@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<img class="img-fluid" src="{% static 'resimage.jpg' %}" alt="home">
-<div class="container">
-    <button class="btn btn-primary" id="homepageButton"><a href="{% url 'web' %}">Dive In</a></button>
+<div class="container-fluid p-0">
+    <div class="jumbotron jumbotron-fluid bg-transparent text-center position-relative">
+        <h1 class="display-4 fw-bold text-warning">Welcome to Patliputra Palate</h1>
+        <p class="lead text-secondary">Explore the flavors of India's rich heritage</p>
+        <div class="d-flex justify-content-end position-absolute top-50 end-0 translate-middle-y">
+            <a class="btn btn-warning btn-lg" href="{% url 'web' %}">Dive In</a>
+        </div>
+        <img class="img-fluid mt-4" src="{% static 'resimage.jpg' %}" alt="home">
+    </div>
 </div>
 {% endblock %}
