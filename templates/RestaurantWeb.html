@@ -1,89 +1,86 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
 <header>
-{% include 'header.html' %}
+    {% include 'header.html' %}
 </header>
-<main>
-    <div>
-        <p class="head1">Patliputra Palate</p>
-        <p class="head2">Patna</p>
-        <img src="{% static 'exotic.jpeg' %}" style="float: right;" alt="image_restaurant">
-        <p class="mainpara">Patliputra Palate invites you to savor Bihar's rich heritage with a fusion of ancient and modern flavors. Our restaurant offers a cultural journey through food, perfect for all occasions.</p>
-        <a href="#section1"><button id="RaT">Reserve a Table</button></a>
-    </div>
-    <!-- <div>
-        <p class="OFD">Out For Delivery!</p>
-    </div> -->
-    <div id="menu">
-            <label for="starter">Starter</label>
-            <input type="radio" id="starter">
-            <label for="lunch">Lunch</label>
-            <input type="radio" id="lunch">
-            <label for="dinner">Dinner</label>
-            <input type="radio" id="dinner">
-            <label for="extras">Extras</label>
-            <input type="radio" id="extras">
-            <label for="drinks">Drinks</label>
-            <input type="radio" id="drinks">
-    </div>
-    <div>
-        <div class="food_content">
-            <p>Sushi is a Japanese dish that has taken the world by storm. In recent years, sushi has gained popularity in India, but it is still considered a niche cuisine. However, with Indian twists, sushi has the potential to reach new heights of popularity. From vegetarian sushi rolls to paneer sushi, Indian chefs are experimenting with sushi to suit the Indian palate.</p>
-            <img src="{% static 'shushi.jpeg' %}" alt="sushi">
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Patliputra Palate</h1>
+            <h2>Patna</h2>
+            <p>Patliputra Palate invites you to savor Bihar's rich heritage with a fusion of ancient and modern flavors. Our restaurant offers a cultural journey through food, perfect for all occasions.</p>
+            <button class="btn btn-primary"><a href="#section1">Reserve a Table</a></button>
         </div>
-        <div class="food_content">
-            <p>Momo, a Tibetan dish, has been a popular street food in India for decades. However, the Indian food scene is now shifting its focus to Bao and Thapnese buns, which are taking over the food scene. These steamed buns filled with meat or vegetables are soft, fluffy, and flavorful. They are perfect as a snack or a meal and can be found in high-end restaurants as well as street food stalls.</p>
-            <img src="{% static 'momo.jpeg' %}" alt="momo">
-        </div>
-        <div class="food_content">
-            <p>Korean cuisine has been gaining popularity in India over the past few years. Korean noodles, also known as Ramyeon, have become a new favorite among food enthusiasts. These noodles are spicy, flavorful, and perfect for a quick meal. They are now available in many Korean restaurants across India.</p>
-            <img src="{% static 'korean_cuisine.jpeg' %}"  alt="korean_cuisine">
-        </div>
-        <div class="food_content">
-            <p>Pizza has been a popular food in India for many years, and there are many pizza chains across the country. However, people are now turning to authentic Italian pizza made in a firewood oven. Napoleon pizza is a thin-crust pizza topped with fresh ingredients and cooked in a wood-fired oven. It is a delicious and healthier alternative to big food chain pizzas.</p>
-            <img src="{% static 'pizza.jpeg' %}"  alt="pizza">
+        <div class="col-md-12">
+            <img src="{% static 'exotic.jpeg' %}" class="img-fluid float-md-right" alt="image_restaurant">
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-check form-check-inline">
+                <label class="form-check-label" for="inline-radio1">Starter</label>
+                <input type="radio" class="form-check-input" id="inline-radio1">
+                <label class="form-check-label" for="inline-radio2">Lunch</label>
+                <input type="radio" class="form-check-input" id="inline-radio2">
+                <label class="form-check-label" for="inline-radio3">Dinner</label>
+                <input type="radio" class="form-check-input" id="inline-radio3">
+                <label class="form-check-label" for="inline-radio4">Extras</label>
+                <input type="radio" class="form-check-input" id="inline-radio4">
+                <label class="form-check-label" for="inline-radio5">Drinks</label>
+                <input type="radio" class="form-check-input" id="inline-radio5">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="food-content">
+                <p>Sushi is a Japanese dish that has taken the world by storm. In recent years, sushi has gained popularity in India, but it is still considered a niche cuisine. However, with Indian twists, sushi has the potential to reach new heights of popularity. From vegetarian sushi rolls to paneer sushi, Indian chefs are experimenting with sushi to suit the Indian palate.</p>
+                <img src="{% static 'shushi.jpeg' %}" class="img-fluid float-md-right" alt="sushi">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="food-content">
+                <p>Momo, a Tibetan dish, has been a popular street food in India for decades. However, the Indian food scene is now shifting its focus to Bao and Thapnese buns, which are taking over the food scene. These steamed buns filled with meat or vegetables are soft, fluffy, and flavorful. They are perfect as a snack or a meal and can be found in high-end restaurants as well as street food stalls.</p>
+                <img src="{% static 'momo.jpeg' %}" class="img-fluid float-md-right" alt="momo">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="food-content">
+                <p>Korean cuisine has been gaining popularity in India over the past few years. Korean noodles, also known as Ramyeon, have become a new favorite among food enthusiasts. These noodles are spicy, flavorful, and perfect for a quick meal. They are now available in many Korean restaurants across India.</p>
+                <img src="{% static 'korean_cuisine.jpeg' %}" class="img-fluid float-md-right" alt="korean_cuisine">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="food-content">
+                <p>Pizza has been a popular food in India for many years, and there are many pizza chains across the country. However, people are now turning to authentic Italian pizza made in a firewood oven. Napoleon pizza is a thin-crust pizza topped with fresh ingredients and cooked in a wood-fired oven. It is a delicious and healthier alternative to big food chain pizzas.</p>
+                <img src="{% static 'pizza.jpeg' %}" class="img-fluid float-md-right" alt="pizza">
+            </div>
+        </div>
+    </div>
+
     <div id="section1">
         <h2>Reserve a Table</h2>
         <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
+            <div class="form-group">
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
             <div>
-                <button type="submit" onclick="myFun()" id="submit_button">Confirm</button>
+                <button type="submit" onclick="myFun()" class="btn btn-primary">Confirm</button>
             </div>
         </form>
     </div>
 </main>
-<!-- <label for="dateOfArrival">Date(MM-DD-YYYY)* </label>
-            <input type="date" id="dateOfArrival" required>
-            <br>
-            <label for="timeOfArrival">Time* </label>
-            <input type="time" id="timeOfArrival" required>
-            <label for="noOfDiners">No. of Diners* </label>
-            <input type="number" id="noOfDiners" required>
-            <br>
-            <p><b>Contact Information</b></p>
-            <br>
-            <label for="firstName">First Name* </label>
-            <input type="text" id="firstName" required>
-            <label for="lastName">Last Name* </label>
-            <input type="text" id="lastName" required>
-            <br>
-            <label for="emailID">Email* </label>
-            <input type="email" id="emailID" required>
-            <br>
-            <label for="phoneNo">Phone No.* </label>
-            <input type="number" id="phoneNo" required>
-            <p>*is required</p> -->
-<script>
-    function myFun(){
-        alert('Form Submitted!');
-    }
-</script>
+
 <footer>
     {% include 'footer.html' %}
 </footer>
-
 {% endblock %}

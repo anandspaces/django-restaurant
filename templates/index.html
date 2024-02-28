@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<img class="homeimg" src="{% static 'resimage.jpg' %}" alt="home">
-<div class="homepage">
-    <button id="homepageButton"><a href="{% url 'web' %}">Dive In</a></button>
+<img class="img-fluid" src="{% static 'resimage.jpg' %}" alt="home">
+<div class="container">
+    <button class="btn btn-primary" id="homepageButton"><a href="{% url 'web' %}">Dive In</a></button>
 </div>
 {% endblock %}
