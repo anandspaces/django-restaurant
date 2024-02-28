@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% include 'header.html' %}
+<header>
+    {% include 'header.html' %}
+</header>
 <div class="container mt-5">
     <div class="card">
         <div class="card-body">
@@ -18,16 +20,18 @@
                 </div>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-warning me-md-2" id="informBackButton"><a href="{% url 'web' %}" class="text-white">Edit</a></button>
-                <button class="btn btn-warning" id="informButton" onclick="myFun()">Confirm</button>
+                <button class="btn btn-warning btn-lg me-md-2" id="informBackButton"><a href="{% url 'web' %}" class="text-decoration-none">Edit</a></button>
+                <button class="btn btn-warning btn-lg" id="informButton" onclick="myFun()"><a href="{% url 'confirm' %}" class="text-decoration-none">Confirm</a></button>
             </div>
         </div>
     </div>
 </div>
+<footer class="custom-footer">
+    {% include 'footer.html' %}
+</footer>
 <script>
     function myFun(){
         alert("Order Successful!");
     }
 </script>
-{% include 'footer.html' %}
 {% endblock %}

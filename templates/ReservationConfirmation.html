@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% include 'header.html' %}
-<div class="container mt-5" id="section3">
+<header>
+    {% include 'header.html' %}
+</header>
+<div class="container mt-5">
     <div class="card">
         <div class="card-body">
             <h2 class="card-title">Reservation Confirmation</h2>
@@ -12,9 +14,11 @@
             <p>Hope to see you soon!</p>
             <p><strong>For more information:</strong></p>
             <p>patliputra.palate@gmail.com</p>
-            <button class="btn btn-warning mt-3" id="goBackHomeButton"><a href="{% url 'web' %}" class="text-white">Go Back Home</a></button>
+            <button class="btn btn-warning btn-lg mt-3" id="goBackHomeButton"><a href="{% url 'web' %}" class="text-decoration-none">Go Back Home</a></button>
         </div>
     </div>
 </div>
-{% include 'footer.html' %}
+<footer class="custom-footer">
+    {% include 'footer.html' %}
+</footer>    
 {% endblock %}
