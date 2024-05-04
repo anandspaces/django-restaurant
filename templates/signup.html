@@ -4,14 +4,19 @@
 
 <div class='container h-100'>
     <div class='row h-100 justify-content-center align-items-center'>                 
-    <div class='col-md-6 '> 
-    <div class="card">
-    <div class="card-body">
-                                                        
-        <h1> Sign up </h1>                       
-                                        
-        <form class='form-group'>                                              
-            <div class='form-control'>
+    <div class='col-md-6 card p-3 shadow-lg'> 
+                                                  
+        <h1> Register </h1>                       
+        <hr />
+        {% if messages %}
+        <div class="alert alert-primary" role="alert">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+        <form class='form-group' action="post">                                              
+            <div class='form-control mb-1'>
                 <label for="name">
                     Name
                 </label>
@@ -23,19 +28,19 @@
                     placeholder="Name"
                 />
             </div>
-            <div class="form-control">
-                <label for="password">
-                    Password
+            <div class="form-control mb-1">
+                <label for="username">
+                    Username
                 </label>
                 <input
-                    id="password"
+                    id="username"
                     name="email"
                     type="email"                                    
                     required                                                                                
-                    placeholder="Password"
+                    placeholder="Username"
                 />
             </div>
-            <div class="form-control">
+            <div class="form-control mb-1">
                 <label for="email-address">
                     Email address
                 </label>
@@ -48,7 +53,7 @@
                 />
             </div>
 
-            <div class='form-control'>
+            <div class='form-control mb-1'>
                 <label for="password">
                     Password
                 </label>
@@ -61,8 +66,8 @@
                 />
             </div>
                                 
-            <div>
-                <button class='btn btn-warning mt-3' >      
+            <div class="mb-1">
+                <button class='btn btn-warning mt-2' >      
                     Sign up                                                                  
                 </button>
             </div>                               
@@ -75,8 +80,7 @@
                 <a href="{% url 'login' %}" class="text-decoration-none">Login</a>
                 </button>
         </p>
-        </div>
-        </div>
+        
         </div>
         </div>                       
   </div>
