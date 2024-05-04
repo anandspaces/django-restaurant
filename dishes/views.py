@@ -34,3 +34,9 @@ def inform(request):
 
 def confirm(request):
     return render(request,'ReservationConfirmation.html',{'RID':reference_no_var})
+
+def login(request):
+    return render(request,'login.html',{})
+
+def signup(request):
+    return render(request,'signup.html',{})
