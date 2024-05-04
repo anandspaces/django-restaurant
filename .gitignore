@@ -1,1 +1,13 @@
-db.sqlite3
+# Database files
+*.sqlite3
+*.db
+
+# Static files
+/static/
+/staticfiles/
+
+# Elastic Beanstalk configuration files
+.ebextensions/
+
+# ZIP folders
+*.zip
