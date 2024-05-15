@@ -1,9 +1,6 @@
 from django.shortcuts import render,redirect
-from datetime import datetime
-from django.contrib import messages
-from django.contrib.auth import authenticate
-from django.contrib.auth.models import User
 from .forms import CustomerForm
+from datetime import datetime
 from .models import Customer
 # Create your views here.
 
@@ -39,45 +36,7 @@ def confirm(request):
     return render(request,'ReservationConfirmation.html',{'RID':reference_no_var})
 
 def login(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('username')
-
-        if User.objects.filter(username = username).exists():
-            messages.error(request, 'Invalid Username')
-            return redirect('/login/')
-        
-        user = authenticate(username = username, password = password)
-        if user is None:
-            messages.error(request,'Invalid username/password')
-            return redirect('/login/')
-        else: 
-            login()
-            return redirect('/home/')
-
     return render(request,'login.html',{})
 
-def register(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        username = request.POST.get('username')
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-
-        user = User.objects.filter(username = username)
-        if user.exists():
-            messages.info(request,'username already taken!')
-            return redirect(request, '/signup/')
-
-        user = User.objects.create(
-            name = name,
-            username = username,
-            email = email,
-            # password = password
-        )
-        user.set_password(password) # salting
-        user.save()
-        messages.info(request, 'Account created successfully!')
-        return redirect('/signup/')
-
+def signup(request):
     return render(request,'signup.html',{})

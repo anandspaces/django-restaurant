@@ -4,12 +4,14 @@
 
 <div class='container h-100'>
     <div class='row h-100 justify-content-center align-items-center'>                 
-    <div class='col-md-6 card p-3 shadow-lg'> 
+    <div class='col-md-6 '> 
+    <div class="card">
+    <div class="card-body">
                                                         
         <h1> Login </h1>                       
                                         
-        <form class='form-group' action="post">                                              
-            <div class='form-control mb-1'>
+        <form class='form-group'>                                              
+            <div class='form-control'>
                 <label for="email-address">
                     Email address
                 </label>
@@ -22,7 +24,7 @@
                 />
             </div>
 
-            <div class='form-control mb-1'>
+            <div class='form-control'>
                 <label for="password">
                     Password
                 </label>
@@ -49,6 +51,8 @@
                 <a href="{% url 'signup' %}" class="text-decoration-none">Sign up</a>
                 </button>
         </p>
+        </div>
+        </div>
         </div>
         </div>                       
   </div>
