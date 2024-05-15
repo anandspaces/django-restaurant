@@ -3,8 +3,8 @@
 *.db
 
 # Static files
-/static/
-/staticfiles/
+# /static/
+# /staticfiles/
 
 # Elastic Beanstalk configuration files
 .ebextensions/
