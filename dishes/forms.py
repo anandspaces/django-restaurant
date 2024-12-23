@@ -4,7 +4,7 @@ from .models import Customer
 class CustomerForm(ModelForm):
     class Meta:
         model = Customer
-        fields = ['datetime','no_of_diners','name','email','phone_no']
+        fields = ['datetime','no_of_diners','name','email','phone_no','special_request']
         widgets = {
             'datetime': widgets.DateTimeInput(attrs={'type': 'datetime-local', 'class': 'form-control'}),
             'no_of_diners': widgets.NumberInput(attrs={'class': 'form-control'}),

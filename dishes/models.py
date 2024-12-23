@@ -7,8 +7,8 @@ class Customer(models.Model):
     name = models.CharField(max_length=100,null=True)
     email = models.EmailField(null=True)
     phone_no = models.PositiveIntegerField(null=True)
-    special_request = models.TextField()
+    special_request = models.TextField(blank=True,null=True)
     reference_no = models.CharField(max_length=20,unique=True,null=True)
 
     def __str__(self):
-        return f"{self.datetime}  {self.no_of_diners}  {self.name}  {self.email}  {self.phone_no}"
+        return f"{self.datetime}  {self.no_of_diners}  {self.name}  {self.email}  {self.phone_no}  {self.special_request}"
