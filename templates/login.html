@@ -3,58 +3,46 @@
 {% block content %}
 
 <div class='container h-100'>
-    <div class='row h-100 justify-content-center align-items-center'>                 
-    <div class='col-md-6 '> 
-    <div class="card">
-    <div class="card-body">
-                                                        
-        <h1> Login </h1>                       
-                                        
-        <form class='form-group'>                                              
+  <div class='row h-100 justify-content-center align-items-center'>
+    <div class='col-md-6 '>
+      <div class="card">
+        <div class="card-body">
+
+          <h1> Login </h1>
+
+          <form class='form-group'>
             <div class='form-control'>
-                <label for="email-address">
-                    Email address
-                </label>
-                <input
-                    id="email-address"
-                    name="email"
-                    type="email"                                    
-                    required                                                                                
-                    placeholder="Email address"
-                />
+              <label for="email-address">
+                Email address
+              </label>
+              <input id="email-address" name="email" type="email" required placeholder="Email address" />
             </div>
 
             <div class='form-control'>
-                <label for="password">
-                    Password
-                </label>
-                <input
-                    id="password"
-                    name="password"
-                    type="password"                                    
-                    required                                                                                
-                    placeholder="Password"
-                />
+              <label for="password">
+                Password
+              </label>
+              <input id="password" name="password" type="password" required placeholder="Password" />
             </div>
-                                
+
             <div>
-                <button class='btn btn-warning mt-3' >      
-                    Login                                                                  
-                </button>
-            </div>                               
-        </form>
-        
-        <p class="text-sm text-black">
+              <button class='btn btn-warning mt-3'>
+                Login
+              </button>
+            </div>
+          </form>
+
+          <p class="text-sm text-black">
             No account yet? {' '}
-            
+
             <button class="btn btn-light btn-outline-warning btn-sm">
-                <a href="{% url 'signup' %}" class="text-decoration-none">Sign up</a>
-                </button>
-        </p>
+              <a href="{% url 'signup' %}" class="text-decoration-none">Sign up</a>
+            </button>
+          </p>
         </div>
-        </div>
-        </div>
-        </div>                       
+      </div>
+    </div>
   </div>
-  
+</div>
+
 {% endblock %}

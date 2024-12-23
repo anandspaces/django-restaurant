@@ -2,36 +2,38 @@
 {% load static %}
 {% block content %}
 <header>
-    {% include 'header.html' %}
+  {% include 'header.html' %}
 </header>
 <div class="container mt-5">
-    <div class="card">
-        <div class="card-body">
-            <h2 class="card-title">Reservation Information</h2>
-            <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-2"><strong>Name:</strong> <span id="name_">{{ info.name }}</span></p>
-                    <p class="mb-2"><strong>Date/Time:</strong> <span id="date_time_">{{ info.datetime }}</span></p>
-                    <p class="mb-2"><strong>Email:</strong> <span id="email_">{{ info.email }}</span></p>
-                    <p class="mb-2"><strong>Phone No:</strong> <span id="phoneNo_">{{ info.phone_no }}</span></p>
-                    <!-- <p class="mb-2"><strong>Table No:</strong> <span id="tableNo_"></span></p> -->
-                    <p class="mb-2"><strong>No. of Diners:</strong> <span id="noOfDiners_">{{ info.no_of_diners }}</span></p>
-                </div>
-            </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-warning btn-lg me-md-2" id="informBackButton"><a href="{% url 'web' %}" class="text-decoration-none">Edit</a></button>
-                <button class="btn btn-warning btn-lg" id="informButton" onclick="myFun()"><a href="{% url 'confirm' %}" class="text-decoration-none">Confirm</a></button>
-            </div>
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Reservation Information</h2>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-2"><strong>Name:</strong> <span id="name_">{{ info.name }}</span></p>
+          <p class="mb-2"><strong>Date/Time:</strong> <span id="date_time_">{{ info.datetime }}</span></p>
+          <p class="mb-2"><strong>Email:</strong> <span id="email_">{{ info.email }}</span></p>
+          <p class="mb-2"><strong>Phone No:</strong> <span id="phoneNo_">{{ info.phone_no }}</span></p>
+          <!-- <p class="mb-2"><strong>Table No:</strong> <span id="tableNo_"></span></p> -->
+          <p class="mb-2"><strong>No. of Diners:</strong> <span id="noOfDiners_">{{ info.no_of_diners }}</span></p>
         </div>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-warning btn-lg me-md-2" id="informBackButton"><a href="{% url 'web' %}"
+            class="text-decoration-none">Edit</a></button>
+        <button class="btn btn-warning btn-lg" id="informButton" onclick="myFun()"><a href="{% url 'confirm' %}"
+            class="text-decoration-none">Confirm</a></button>
+      </div>
     </div>
+  </div>
 </div>
 <footer class="custom-footer">
-    {% include 'footer.html' %}
+  {% include 'footer.html' %}
 </footer>
 <script>
-    function myFun(){
-        alert("Order Successful!");
-    }
+  function myFun() {
+    alert("Order Successful!");
+  }
 </script>
 {% endblock %}
