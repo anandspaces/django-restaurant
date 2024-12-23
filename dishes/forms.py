@@ -1,4 +1,3 @@
-# new
 from django.forms import ModelForm,widgets
 from .models import Customer
 
@@ -12,4 +11,5 @@ class CustomerForm(ModelForm):
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'email': widgets.EmailInput(attrs={'class': 'form-control'}),
             'phone_no': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'special_request': widgets.Textarea(attrs={'class': 'form-control'}),
         }

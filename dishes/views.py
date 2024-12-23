@@ -7,6 +7,24 @@ from .models import Customer
 def home(request):
     return render(request,'index.html',{})
 
+def menu(request):
+    return render(request,'menu.html',{})
+
+def service(request):
+    return render(request,'service.html',{})
+
+def team(request):
+    return render(request,'team.html',{})
+
+def testimonials(request):
+    return render(request,'testimonials.html',{})
+
+def about(request):
+    return render(request,'about.html',{})
+
+def booking(request):
+    return render(request,'booking.html',{})
+
 def web(request):
     def generate_reference_no():
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
@@ -37,6 +55,3 @@ def confirm(request):
 
 def login(request):
     return render(request,'login.html',{})
-
-def signup(request):
-    return render(request,'signup.html',{})

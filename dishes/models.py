@@ -7,6 +7,7 @@ class Customer(models.Model):
     name = models.CharField(max_length=100,null=True)
     email = models.EmailField(null=True)
     phone_no = models.PositiveIntegerField(null=True)
+    special_request = models.TextField()
     reference_no = models.CharField(max_length=20,unique=True,null=True)
 
     def __str__(self):
