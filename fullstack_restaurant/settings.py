@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0%1m*7966ul)i7)=+0l*$19nfqk#e8z)+l3-%77hhqwwzw3(j1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app'] # vercel config
+# ALLOWED_HOSTS = ['.vercel.app'] # vercel config
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'fullstack_restaurant.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "restaurantdb",
+        "USER": "root",
+        "PASSWORD": "12345678",
+        "HOST": "127.0.0.1",
+        "PORT": "3306",
     }
 }
 

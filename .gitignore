@@ -6,8 +6,10 @@
 # /static/
 # /staticfiles/
 
-# Elastic Beanstalk configuration files
-.ebextensions/
-
 # ZIP folders
 *.zip
+
+# Cache Files 
+fullstack_restaurant/__pycache__/
+dishes/__pycache__/
+dishes/migrations/__pycache__/

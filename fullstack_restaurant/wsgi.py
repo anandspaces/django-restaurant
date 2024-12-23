@@ -15,4 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fullstack_restaurant.settings')
 
 application = get_wsgi_application()
 
-app = application # vercel config
+# app = application # vercel config
